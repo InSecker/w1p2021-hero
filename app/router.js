@@ -8,6 +8,7 @@ import Phase3 from './components/Phase3.vue';
 import Phase4 from './components/Phase4.vue';
 import Phase5 from './components/Phase5.vue';
 import Phase6 from './components/Phase6.vue';
+import Characters from './components/Characters.vue';
 
 Vue.use(Router);
 
@@ -44,6 +45,11 @@ const router = new Router({
       path: '/phase6',
       component: Phase6,
     },
+    {
+      path: '/characters',
+      component: Characters,
+    },
+    // Ne rien mettre en dessous
     {
       path: '*',
       redirect: { name: 'home' },

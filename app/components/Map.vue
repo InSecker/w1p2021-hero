@@ -1,8 +1,7 @@
 <template>
   <div class="big-header">
-    <h1>{{ message }}</h1>
-    <br />
-    <router-link class="button" to="/phase1">Commencer l'aventure</router-link>
+    <h1>Map</h1>
+    
   </div>
 </template>
 

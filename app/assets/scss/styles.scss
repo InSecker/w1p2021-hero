@@ -33,3 +33,24 @@ textarea {
   display: inline-block;
   border: none;
 }
+
+.black-leave-active{
+  animation: toBlack 2s;
+}
+
+.black-enter-active{
+  animation: toBlack 2s ease 2s reverse;
+}
+
+@keyframes toBlack {
+  to {
+    opacity: 0;
+  }
+}
+
+body {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
