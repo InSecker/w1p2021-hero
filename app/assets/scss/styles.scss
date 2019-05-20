@@ -1,7 +1,7 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
-$hetic-green: #0de595;
+$hetic-green: white;
 
 body,
 button,
@@ -20,26 +20,17 @@ textarea {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  font-size: 30px;
 
-  color: white;
-}
-
-.button {
-  color: $hetic-green;
-  text-decoration: none;
-  background: white;
-  padding: 5px;
-  border-radius: 5px;
-  display: inline-block;
-  border: none;
+  color: black;
 }
 
 .black-leave-active{
-  animation: toBlack 2s;
+  animation: toBlack 0.5s;
 }
 
 .black-enter-active{
-  animation: toBlack 2s ease 2s reverse;
+  animation: toBlack 0.5s ease 0.5s reverse;
 }
 
 @keyframes toBlack {

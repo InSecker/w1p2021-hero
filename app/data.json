@@ -1,0 +1,79 @@
+{
+  "chapters": {
+    "Lac de glace": {
+      "id" : 1,
+      "title": "Lac de glace",
+      "detail": "Ce lac dispose d'un trésor en ce milieu. Rare sont ceux qui osent s'aventurer sur cette mince couche de glace!",
+      "intro": "Vous arrivez sur le bord du Lac de Glace. On distingue très clairement le fond du lac au travers de la glace.",
+      "actions": {
+        "emptyInventory": "Doucement, un pas après l'autre, vous commencez à marcher sur cette fine couche de glace qui craque sous vos pieds. Vous gardez courage! Vous appercez déjà le coffre au milieu du lac! Hop hop hop vous vous faufilez telle la brise sur la glace. Enfin vous récuperez la carte du labyrinthe. Vous rejoignez la rive du lac, contemplez une dernière fois ce lac figé, puis vous remettez en route pour votre quête!",
+        "notEmptyInventory": "Très incertain, vous commencez à déambuler sur cette fine couche de glace. Vous n'avez fait qu'une dizaine de mètre mais déjà des fissures se dessinent sous vos pas... Le coffre n'est plus très loin mais la glace s'amincie de plus en plus. Malgrè vos efforts pour rester le plus légé possible sur cette glace, vous tombez dans l'eau glaciale. Votre lourd équipement vous fait sombrer dans les abymes du Lac de Glace."
+      },
+      "item": "Carte du Labyrinthe B"
+    },
+    "Village de marchands": {
+      "id" : 2,
+      "title": "Village de marchands",
+      "detail": "Ce petit village possède une concentration extordinaire de camelot en tout genre. C'est l'endroit parfait pour troquer et vendre vos objets",
+      "intro": "Vous arrivez au village de marchands.",
+      "actions": {
+        "swapArmor": "Vous échanger votre armure contre la Carte du Labyrinthe A.",
+        "swapPlant": "Vous échangez votre Pissenlit Magique contre de l'or.",
+        "swapTreasure": "Vous échanger votre Trésor contre de l'or.",
+        "default": "Vous n'avez rien à troquer."
+      }
+    },
+    "Port": {
+      "id" : 3,
+      "title": "Port",
+      "detail": "À préciser",
+      "intro": "Vous arrivez au Port.",
+      "actions": {
+        "gotGold": "Vous achetez un Bâteau avec votre or!",
+        "default": "Vous vous faites égorger en rentrant dans le port."
+      }
+    },
+    "Forêt Magique": {
+      "id" : 4,
+      "title": "Forêt Magique",
+      "detail": "À préciser",
+      "intro": "Vous entrez dans la forêt magique! Vous récupérez des pissenlits magiques",
+      "item": "Pissenlit Magique"
+    },
+    "Cascade": {
+      "id" : 5,
+      "title": "Cascade",
+      "detail": "À préciser",
+      "inter": "Vous arrivez au pied de cette cascade. La grande chaine qui retiens la source flottante vous permet de monter jusqu'en haut. Vous y découvrez une armure magique!",
+      "actions": {
+        "default": "Rien de plus à faire ici. Du haut de cette cascade vous contempler toute la région. Vous êtes sur le point le plus haut.",
+        "boatAndPlant": ""
+      },
+      "item": "Armure"
+    },
+    "Grotte": {
+      "id" : 6,
+      "title": "Grotte",
+      "detail": "À préciser",
+      "actions": ""
+    },
+    "Volcan": {
+      "id" : 7,
+      "title": "Volcan",
+      "detail": "À préciser",
+      "item": "Épée des flammes"
+    },
+    "Labyrinthe":  {
+      "id" : 8,
+      "title": "Labyrinthe",
+      "detail": "À préciser",
+      "intro": "Vous arrivez au labyrinthe.",
+      "actions": {
+        "gotGoodMap": "Avec votre carte vous parvenez à vous diriger sans encombre dans ses dédales. À gauche, deux fois à droite, tout droit... Oh un coffre! Magnifique! Vous trouvez le trésor.",
+        "gotFalseMap": "Avec votre carte vous parvenez à vous dirigier sans encombre dans ses dédales. À gauche, tout droit, à droite... Oops. Pas de chance vous tombez dans un piège.",
+        "gotPlant": "Avec votre pissenlit magique vous parvenez à vous envoler et repérer directement le coffre. Magifique! Vous trouvez le trésor. Hop vous vous envolez à nouveau et regagnez la sortie.",
+        "default": "Vous vous sentez confiant. Un labyrinthe ce n'est pas sorcier il suffit de toujours tourner dans la même direction pour se reperrer... Vous êtes perdu. Vous tentez pendant des jours de retrouvez la sortie... Sans succès."
+      }
+    }
+  }
+}
