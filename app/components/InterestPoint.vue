@@ -1,5 +1,5 @@
 <template>
-  <article :class="interestPoint.name" @click="handleClick()">
+  <article :class="interestPoint.name.replace(/ /g, '_')" @click="handleClick()">
     <h2>{{ interestPoint.name }}</h2>
     <h3>Chapitre {{ interestPoint.order }}</h3>
   </article>
@@ -16,7 +16,15 @@ article {
   text-align: center;
   width: 200px;
   margin-bottom: 10px;
+  transition: all 0.5s ease;
 }
+
+article:hover {
+  color: white;
+  background: black;
+
+}
+
 h3 {
   padding-top: 5px;
 }
@@ -34,6 +42,8 @@ export default {
       if (this.choice) {
         const order = orderService.value();
         this.$emit('order', this.interestPoint.name, order);
+      } else {
+        this.$emit('description', this.interestPoint.name);
       }
     }
   }

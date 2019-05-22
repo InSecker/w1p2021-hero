@@ -15,6 +15,9 @@ class ChapterService {
   render() {
     return this.chapter[this.i];
   }
+  length() {
+    return this.chapter.length;
+  }
 }
 
 module.exports = new ChapterService();

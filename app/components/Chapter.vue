@@ -11,32 +11,28 @@
     <br>
     <button @click="handleClick">Next</button>
 
+    <div class="hud">
+      <section>
+        <ul class="inventory">
+          <h2>Inventaire</h2>
+          <Item
+          v-for="(item, index) in items"
+          :key="index"
+          :item="item"
+          ></Item>
+        </ul>
+      </section>
 
-    <ul class="inventory">
-      <h2>Inventaire</h2>
-      <Item
-      v-for="(item, index) in items"
-      :key="index"
-      :item="item"
-      ></Item>
-    </ul>
+      <section class="life">
+        <h2>Vie: {{ life }}</h2>
+      </section>
+    </div>
+
+
   </div>
 </template>
 
 <style lang="scss" scoped>
-
-.inventory {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.1);
-  padding: 10px;
-  h2 {
-    text-align: center;
-    padding-bottom: 5px;
-  }
-}
-
 .content {
   background: rgba(255,255,255,0.5);
   color: rgb(21, 21, 21);
@@ -46,15 +42,32 @@
   margin: 0 auto;
 }
 
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  section {
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    h2 {
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+}
+
 
 </style>
 
 
 <script>
 import chapterService from '../services/chapterService';
-import inventoryService from '../services/inventoryService'
+import inventoryService from '../services/inventoryService';
+import lifeService from '../services/lifeService';
 import Item from './Item.vue';
-import json from '../data.json'
+import json from '../data.json';
 
 export default {
   data: function() {
@@ -62,7 +75,9 @@ export default {
       title: chapterService.render(),
       items: inventoryService.content(),
       content: '',
-      nextView: null
+      nextView: null,
+      life: lifeService.value(),
+      counter: 0,
     }
   },
   props: ['chapters'],
@@ -83,6 +98,7 @@ export default {
     actions() {
       this.nextView = parseInt(this.$route.path.replace('/chapter/', '')) + 1;
       this.nextView = '/chapter/' + this.nextView;
+      this.counter++;
 
       let current = json.chapters[this.title];
 
@@ -172,6 +188,52 @@ export default {
         }
       }
 
+      // Grotte 
+      if (current.title === "Grotte") {
+        lifeService.loose();
+        if (lifeService.value() < 50) {
+          this.content.push(current.actions.death);
+          this.nextView = '/die';
+        } else {
+          this.content.push(current.actions.default);
+        }
+        this.life = lifeService.value();
+      }
+
+      // Cascade 
+      if (current.title === "Cascade") {
+        if (inventoryService.content().includes('Bâteau') && inventoryService.content().includes('Pissenlit Magique')) {
+          this.content.push(current.actions.boatAndPlant)
+          inventoryService.removeItem('Bâteau');
+          inventoryService.removeItem('Pissenlit Magique');
+          inventoryService.addItem('Bâteau Volant');
+        } else {
+          this.content.push(current.actions.default);
+        }
+        inventoryService.addItem('Armure');
+      }
+
+      // Volcan
+      if (current.title === 'Volcan') {
+        if (inventoryService.content().includes('Bâteau Volant')) {
+          this.content.push(current.actions.flyingBoat);
+          inventoryService.addItem(current.item);
+        } else if (lifeService.value >= 50) {
+          this.content.push(current.actions.default);
+          inventoryService.addItem(current.item);
+        } else {
+          this.content.push(current.actions.death);
+          this.nextView = '/die';
+        }
+      }
+
+
+      // Win
+      if (this.counter === 8 && this.nextView !== '/die') {
+        this.nextView = '/win';
+      }
+
+      console.log(this.counter)
     }
   },
   beforeMount() {

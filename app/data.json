@@ -14,7 +14,7 @@
     "Village de marchands": {
       "id" : 2,
       "title": "Village de marchands",
-      "detail": "Ce petit village possède une concentration extordinaire de camelot en tout genre. C'est l'endroit parfait pour troquer et vendre vos objets",
+      "detail": "Ce petit village possède une concentration extordinaire de camelot en tout genre. C'est l'endroit parfait pour troquer et vendre vos objets.",
       "intro": "Vous arrivez au village de marchands.",
       "actions": {
         "swapArmor": "Vous échanger votre armure contre la Carte du Labyrinthe A.",
@@ -26,7 +26,7 @@
     "Port": {
       "id" : 3,
       "title": "Port",
-      "detail": "À préciser",
+      "detail": "Le port est l'endroit le plus mal famé du royaume. Il y reste néanmoins queqlues marchands plus ou moins honnête. Restez prudent!",
       "intro": "Vous arrivez au Port.",
       "actions": {
         "gotGold": "Vous achetez un Bâteau avec votre or!",
@@ -36,44 +36,54 @@
     "Forêt Magique": {
       "id" : 4,
       "title": "Forêt Magique",
-      "detail": "À préciser",
+      "detail": "Une légende raconte des plantes enchantées poussent dans cette épaisse forêt.",
       "intro": "Vous entrez dans la forêt magique! Vous récupérez des pissenlits magiques",
       "item": "Pissenlit Magique"
     },
     "Cascade": {
       "id" : 5,
       "title": "Cascade",
-      "detail": "À préciser",
-      "inter": "Vous arrivez au pied de cette cascade. La grande chaine qui retiens la source flottante vous permet de monter jusqu'en haut. Vous y découvrez une armure magique!",
+      "detail": "C'est la source d'eau du royaume tout entier. Retenue par une immense chaîne, cette île flottante le point le plus haut du royaume.",
+      "intro": "Vous arrivez au pied de cette cascade. La grande chaine qui retiens la source flottante vous permet de monter jusqu'en haut. Vous y découvrez une armure magique!",
       "actions": {
-        "default": "Rien de plus à faire ici. Du haut de cette cascade vous contempler toute la région. Vous êtes sur le point le plus haut.",
-        "boatAndPlant": ""
+        "default": "Rien de plus à faire ici. Du haut de cette cascade vous contempler toute la région. Vous êtes sur le point le plus haut du royaume.",
+        "boatAndPlant": "Vous embarquez sur votre bâteau. La magie des pissenlits vous permet de vous envolez!"
       },
       "item": "Armure"
     },
     "Grotte": {
       "id" : 6,
       "title": "Grotte",
-      "detail": "À préciser",
-      "actions": ""
+      "detail": "Une grotte sombre et mystérieuse. Très peu d'aventuriers s'y risquent, ceux qui en resorte vivant sont encore plus rare. ",
+      "intro": "Votre chemin vous mène maintenant votre la grotte. Plus vous vous en approchez plus vous semblez aspiré par l'obscurité. Vous êtes dans le noir complet et une étrange sensation de fatigue vous emporte. Vous vous réveillez à l'entrée de la grotte en saignant.",
+      "actions": {
+        "death": "Vous n'avez plus de vie, vous mourrez",
+        "default": "Vous perdez de la vie. Qu'est ce qui a bien pou se passer dans cette maudite grotte?! Vous vous remettez en chemin sans plus attendre."
+      }
     },
     "Volcan": {
       "id" : 7,
       "title": "Volcan",
-      "detail": "À préciser",
-      "item": "Épée des flammes"
+      "detail": "Sans doûte l'endroit le plus dangereux du royaume! C'est ici que fût forger l'Épée des flammes il y très longtemps. Une histoire raconte que la lame est toujours là, elle attendrait son prochain propriètaire.",
+      "item": "Épée des flammes",
+      "actions": {
+        "flyingBoat" : "Vous arrivez aux abords du Volcan sur votre bâteau volant. Vous avez une altitude bien supérieur à celle du sommet du volcan. Vous arrivez sans peine à vous approchez du cratère. Vous récupérez l'Épée des flammes!",
+        "default": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'assencion. Les pentes éscarpées vous font tribucher sur la roche burlante! Vous perdez de la vie. Vous arrivez néanmoins jusqu'au cratère. Vous récupérez l'Épée des flammes!",
+        "death": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'assencion. Les pentes éscarpées vous font tribucher sur la roche burlante! Vous mourrez."
+      }
     },
     "Labyrinthe":  {
       "id" : 8,
       "title": "Labyrinthe",
-      "detail": "À préciser",
+      "detail": "Il est si facile de se perde dans ce labyrinthe que certain s'amuse à cacher des trésors dans ses dédale de couloirs. Les pilleurs n'ont  plus qu'à recurper l'équipement des aventuriers qui meurent de faim.",
       "intro": "Vous arrivez au labyrinthe.",
       "actions": {
         "gotGoodMap": "Avec votre carte vous parvenez à vous diriger sans encombre dans ses dédales. À gauche, deux fois à droite, tout droit... Oh un coffre! Magnifique! Vous trouvez le trésor.",
         "gotFalseMap": "Avec votre carte vous parvenez à vous dirigier sans encombre dans ses dédales. À gauche, tout droit, à droite... Oops. Pas de chance vous tombez dans un piège.",
         "gotPlant": "Avec votre pissenlit magique vous parvenez à vous envoler et repérer directement le coffre. Magifique! Vous trouvez le trésor. Hop vous vous envolez à nouveau et regagnez la sortie.",
-        "default": "Vous vous sentez confiant. Un labyrinthe ce n'est pas sorcier il suffit de toujours tourner dans la même direction pour se reperrer... Vous êtes perdu. Vous tentez pendant des jours de retrouvez la sortie... Sans succès."
+        "default": "Vous vous sentez confiant. Un labyrinthe ce n'est pas sorcier il suffit de toujours tourner dans la même direction pour se repèrer... Vous êtes perdu. Vous tentez pendant des jours de retrouvez la sortie... Sans succès."
       }
     }
-  }
+  },
+  "rules": "Cliquez sur chaque point d'intéret pour en découvrir ses caractéristiques. Une fois que vous avez une idée du chemin à faire parcourir à votre héro, cliquez sur Choisir le chemin. Cliquez à nouveau sur les points d'intérêts pour définir l'ordre des chapitres de votre histoire. Cliquez sur Lancer l'aventure pour démarrer votre histoire. Le but de votre quête est de parcourir tous les lieux et d'arriver en un seul morceau au château. Vous devez absolument récupérer de quoi vous battre sur votre chemin pour affronter le roi du château. Bonne chance!"
 }

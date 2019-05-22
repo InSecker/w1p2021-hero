@@ -1,7 +1,16 @@
 <template>
   <div class="big-header">
     <div class="main">
-      <h1>Carte</h1>
+
+      <div class="rules">
+        <h1>Votre quête, si vous l'acceptez!</h1>
+        <p>{{ rules }}</p>
+
+        <div class="buttons">
+          <button class="button" @click="handleClick()">Choisir le chemin</button>
+          <button class="button" @click="handleStart()">Lancer l'aventure</button>
+        </div>
+      </div>
 
       <InterestPoint
         v-for="(interestPoint, index) in interestPoints"
@@ -9,12 +18,8 @@
         :interestPoint="interestPoint"
         :choice="choice"
         @order="handleOrder"
+        @description="handleDescription"
       ></InterestPoint>
-
-      <div class="buttons">
-        <button class="button" @click="handleClick()">Choisir le chemin</button>
-        <button class="button" @click="handleStart()">Lancer l'aventure</button>
-      </div>
     </div>
 
     <img 
@@ -25,25 +30,97 @@
 </template>
 
 <style lang="scss" scoped>
-h1 {
-  color: black;
-}
-
-.buttons {
+.rules {
   position: absolute;
   top: 10px;
   left: 10px;
-  .button  {
+  width: 28%;
+  background: black;
+  padding: 15px;
+  border-radius: 10px;
+  h1 {
+    text-align: center;
     color: white;
-    text-decoration: none;
-    background: black;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    border: none;
-    font-size: 20px;
-    margin: 10px 0;
   }
+  p {
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    margin: 20px 0;
+    line-height: 1.5;
+  }
+}
+
+.button:hover {
+  background: rgb(50, 50, 50);
+  color: white;
+  z-index: 1;
+  width: 45%;
+}
+
+
+.Lac_de_glace {
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+}
+
+.Village_de_marchands {
+  position: absolute;
+  bottom: 30%;
+  left: 20%;
+}
+
+.Port {
+  position: absolute;
+  top: 45%;
+  right: 35%;
+}
+
+.Forêt_Magique {
+  position: absolute;
+  top: 40%;
+  left: 32%;
+}
+
+.Cascade {
+  position: absolute;
+  top: 5%;
+  right: 38%;
+}
+
+.Grotte {
+  position: absolute;
+  bottom: 27%;
+  right: 26%;
+}
+
+.Volcan {
+  position: absolute;
+  bottom: 25%;
+  left: 46%; 
+}
+
+.Château {
+  position: absolute;
+  top: 35%;
+  right: 22%;
+}
+
+.Spawn {
+  position: absolute;
+  bottom: 35%;
+  right: 8%;
+}
+
+.Labyrinthe {
+  position: absolute;
+  bottom: 7%;
+  right: 26%;
+}
+
+h1 {
+  color: black;
 }
 
 .main {
@@ -73,7 +150,6 @@ var interestPoints = [
     order: 'Introduction'
   },
 ]
-
 for (var chapter in json.chapters) {
   interestPoints.push(
     {
@@ -82,21 +158,23 @@ for (var chapter in json.chapters) {
     }
   )
 };
-
 interestPoints.push(
   {
-    name: 'Donjon',
+    name: 'Château',
     order: 'Final'
   }
 )
 
-console.log(interestPoints);
+var orderValues = [1,2,3,4,5,6,7,8]
 
 export default {
   data: function() {
     return  {
       interestPoints,
-      choice: false
+      choice: false,
+      interestPoint: null,
+      name: null,
+      rules : json.rules
     }
   },
   components: {
@@ -104,29 +182,50 @@ export default {
   },
   methods: {
     handleStart() {
-      this.$router.push('/chapter/1');
+      if (orderService.length() == 0) {
+        console.log('okay')
+        console.log(chapterService.length())
+        //chapterService.addChapter('test')
+        while (chapterService.length() < 8) {
+          this.interestPoints.forEach(point => {
+            if (point.name !== "Spawn" && point.name!== "Château") {
+              let chapterNumber = chapterService.length();
+              if (point.order == chapterNumber+1) {
+                chapterService.addChapter(point.name);
+              }
+              console.log(chapterService.length());
+            }
+          });
+        }
+        this.$router.push('/chapter/1');
+      }
     },
     handleClick() {
       // toggle chapter choice
       this.choice = !this.choice;
     },
+    handleDescription(name) {
+      console.log(json.chapters[name].id)
+      this.name = name;
+      let nextRoute = '/description/' + json.chapters[name].id;
+      this.$router.push(nextRoute)
+    },
     handleOrder(name, order) {
 
       const interestPoint = this.interestPoints.find(point => point.name === name);
 
-      if (interestPoint.name !== "Spawn" && interestPoint.name !== "Donjon") {
+      if (interestPoint.name !== "Spawn" && interestPoint.name !== "Château") {
 
         if (interestPoint.order === "?") {
 
           interestPoint.order = order;
-          //console.log(name, order);
-          chapterService.addChapter(name);
-          orderService.increment();
+          orderService.splice();
 
         } else {
 
+          orderService.push(interestPoint.order)
           interestPoint.order = "?";
-          orderService.decrement();
+          //orderService.decrement();
           
         }
 
