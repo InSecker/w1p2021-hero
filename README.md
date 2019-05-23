@@ -38,8 +38,8 @@ URL du site : https://hero-secher-vincelet.netlify.com/
 
 ## Étapes
 
-![alt text](https://raw.githubusercontent.com/InSecker/w1p2021-hero-secher-vincelet/master/ressources/steps_1.png)
-![alt text](https://raw.githubusercontent.com/InSecker/w1p2021-hero-secher-vincelet/master/ressources/steps_2.png)
+![alt text](https://www.zupimages.net/up/19/21/keej.jpg)
+![alt text](https://zupimages.net/up/19/21/tjnm.jpg)
 
 ## Prologue
 
