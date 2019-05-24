@@ -2,7 +2,7 @@
   <div class="big-header">
     <h1 class="zoomText">Path Picker</h1>
     <br />
-    <router-link class="button_black" to="/map">Commencer l'aventure</router-link>
+    <button class="button_black" @click="handleClick">Commencer l'aventure</button>
     <DarkMode></DarkMode>
   </div>
 </template>
@@ -13,6 +13,15 @@ import DarkMode from './DarkMode'
 export default {
   components: {
     DarkMode,
+  },
+  methods: {
+    handleClick() {
+      this.$router.push('/map')
+      document.location.reload(true);
+    }
+  },
+  beforeMount() {
+    localStorage.items = [];
   }
 };
 </script>

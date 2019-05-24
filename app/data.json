@@ -4,10 +4,10 @@
       "id" : 1,
       "title": "Lac de glace",
       "detail": "Ce lac dispose d'un trésor en ce milieu. Rare sont ceux qui osent s'aventurer sur cette mince couche de glace!",
-      "intro": "Vous arrivez sur le bord du Lac de Glace. On distingue très clairement le fond du lac au travers de la glace.",
+      "intro": "Vous arrivez sur le bord du Lac de Glace. On distingue très clairement le fond du lac à travers la glace.",
       "actions": {
-        "emptyInventory": "Doucement, un pas après l'autre, vous commencez à marcher sur cette fine couche de glace qui craque sous vos pieds. Vous gardez courage! Vous appercez déjà le coffre au milieu du lac! Hop hop hop vous vous faufilez telle la brise sur la glace. Enfin vous récuperez la carte du labyrinthe. Vous rejoignez la rive du lac, contemplez une dernière fois ce lac figé, puis vous remettez en route pour votre quête!",
-        "notEmptyInventory": "Très incertain, vous commencez à déambuler sur cette fine couche de glace. Vous n'avez fait qu'une dizaine de mètre mais déjà des fissures se dessinent sous vos pas... Le coffre n'est plus très loin mais la glace s'amincie de plus en plus. Malgrè vos efforts pour rester le plus légé possible sur cette glace, vous tombez dans l'eau glaciale. Votre lourd équipement vous fait sombrer dans les abymes du Lac de Glace."
+        "emptyInventory": "Doucement, un pas après l'autre, vous commencez à marcher sur cette fine couche de glace qui craque sous vos pieds. Vous gardez courage! Vous appercevez déjà le coffre au milieu du lac! Hop hop hop vous vous faufilez telle la brise sur la glace. Enfin vous récuperez la carte du labyrinthe. Vous rejoignez la rive du lac, contemplez une dernière fois ce lieu figé, puis vous remettez en route pour votre quête!",
+        "notEmptyInventory": "Très incertain, vous commencez à déambuler sur cette fine couche de glace. Vous n'avez fait qu'une dizaine de mètres mais déjà des fissures se dessinent sous vos pas... Le coffre n'est plus très loin mais la glace s'amincie de plus en plus. Malgrè vos efforts pour rester le plus légé possible sur cette glace, vous tombez dans l'eau glaciale. Votre lourd équipement vous fait sombrer dans les abymes du Lac de Glace."
       },
       "item": "Carte du Labyrinthe B"
     },
@@ -26,7 +26,7 @@
     "Port": {
       "id" : 3,
       "title": "Port",
-      "detail": "Le port est l'endroit le plus mal famé du royaume. Il y reste néanmoins queqlues marchands plus ou moins honnête. Restez prudent!",
+      "detail": "Le port est l'endroit le plus mal famé du royaume. Il y reste néanmoins quelques marchands plus ou moins honnête. Restez prudent!",
       "intro": "Vous arrivez au Port.",
       "actions": {
         "gotGold": "Vous achetez un Bâteau avec votre or!",
@@ -36,14 +36,14 @@
     "Forêt Magique": {
       "id" : 4,
       "title": "Forêt Magique",
-      "detail": "Une légende raconte des plantes enchantées poussent dans cette épaisse forêt.",
+      "detail": "Une légende raconte que des plantes enchantées poussent dans cette épaisse forêt.",
       "intro": "Vous entrez dans la forêt magique! Vous récupérez des pissenlits magiques",
       "item": "Pissenlit Magique"
     },
     "Cascade": {
       "id" : 5,
       "title": "Cascade",
-      "detail": "C'est la source d'eau du royaume tout entier. Retenue par une immense chaîne, cette île flottante le point le plus haut du royaume.",
+      "detail": "C'est la source d'eau du royaume tout entier. Retenue par une immense chaîne, cette île flottante est le point le plus haut du royaume.",
       "intro": "Vous arrivez au pied de cette cascade. La grande chaine qui retiens la source flottante vous permet de monter jusqu'en haut. Vous y découvrez une armure magique!",
       "actions": {
         "default": "Rien de plus à faire ici. Du haut de cette cascade vous contempler toute la région. Vous êtes sur le point le plus haut du royaume.",
@@ -55,19 +55,19 @@
       "id" : 6,
       "title": "Grotte",
       "detail": "Une grotte sombre et mystérieuse. Très peu d'aventuriers s'y risquent, ceux qui en ressortent vivant sont encore plus rare.",
-      "intro": "Votre chemin vous mène maintenant votre la grotte. Plus vous vous en approchez plus vous semblez aspiré par l'obscurité. Vous êtes dans le noir complet et une étrange sensation de fatigue vous emporte. Vous vous réveillez à l'entrée de la grotte en saignant.",
+      "intro": "Votre chemin vous mène maintenant vers la grotte. Plus vous vous en approchez plus vous semblez aspiré par l'obscurité. Vous êtes dans le noir complet et une étrange sensation de fatigue vous emporte. Vous vous réveillez à l'entrée de la grotte en saignant.",
       "actions": {
         "death": "Vous n'avez plus de vie, vous mourrez",
-        "default": "Vous perdez de la vie. Qu'est ce qui a bien pou se passer dans cette maudite grotte?! Vous vous remettez en chemin sans plus attendre."
+        "default": "Vous perdez de la vie. Qu'est ce qui a bien pu se passer dans cette maudite grotte?! Vous vous remettez en chemin sans plus attendre."
       }
     },
     "Volcan": {
       "id" : 7,
       "title": "Volcan",
-      "detail": "Sans doûte l'endroit le plus dangereux du royaume! C'est ici que fût forger l'Épée des flammes il y très longtemps. Une histoire raconte que la lame est toujours là, elle attendrait son prochain propriètaire.",
+      "detail": "Sans doûte l'endroit le plus dangereux du royaume! C'est ici que fût forger l'Épée des flammes il y a très longtemps. Une histoire raconte que la lame est toujours là, elle attendrait son prochain propriètaire.",
       "item": "Épée des flammes",
       "actions": {
-        "flyingBoat" : "Vous arrivez aux abords du Volcan sur votre bâteau volant. Vous avez une altitude bien supérieur à celle du sommet du volcan. Vous arrivez sans peine à vous approchez du cratère. Vous récupérez l'Épée des flammes!",
+        "flyingBoat" : "Vous arrivez aux abords du Volcan sur votre bâteau volant. Vous avez une altitude bien supérieure à celle du sommet du volcan. Vous arrivez sans peine à vous approchez du cratère. Vous récupérez l'Épée des flammes!",
         "default": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'assencion. Les pentes éscarpées vous font tribucher sur la roche burlante! Vous perdez de la vie. Vous arrivez néanmoins jusqu'au cratère. Vous récupérez l'Épée des flammes!",
         "death": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'assencion. Les pentes éscarpées vous font tribucher sur la roche burlante! Vous mourrez."
       }
@@ -75,7 +75,7 @@
     "Labyrinthe":  {
       "id" : 8,
       "title": "Labyrinthe",
-      "detail": "Il est si facile de se perde dans ce labyrinthe que certain s'amuse à cacher des trésors dans ses dédale de couloirs. Les pilleurs n'ont  plus qu'à recurper l'équipement des aventuriers qui meurent de faim.",
+      "detail": "Il est si facile de se perdre dans ce labyrinthe que certains s'amusent à cacher des trésors dans ses dédales de couloirs. Les pilleurs n'ont plus qu'à recupérer l'équipement des aventuriers qui meurent de faim.",
       "intro": "Vous arrivez au labyrinthe.",
       "actions": {
         "gotGoodMap": "Avec votre carte vous parvenez à vous diriger sans encombre dans ses dédales. À gauche, deux fois à droite, tout droit... Oh un coffre! Magnifique! Vous trouvez le trésor.",
@@ -85,5 +85,5 @@
       }
     }
   },
-  "rules": "Cliquez sur chaque point d'intéret pour en découvrir ses caractéristiques. Une fois que vous avez une idée du chemin à faire parcourir à votre héro, cliquez sur Choisir le chemin. Cliquez à nouveau sur les points d'intérêts pour définir l'ordre des chapitres de votre histoire. Cliquez sur Lancer l'aventure pour démarrer votre histoire. Le but de votre quête est de parcourir tous les lieux et d'arriver en un seul morceau au château. Vous devez absolument récupérer de quoi vous battre sur votre chemin pour affronter le roi du château. Bonne chance!"
+  "rules": "Cliquez sur chaque point d'intéret pour en découvrir ses mystères. Une fois que vous avez une idée du chemin à faire parcourir à votre héros, cliquez sur Choisir le chemin. Cliquez à nouveau sur les points d'intérêts pour définir l'ordre des chapitres de votre histoire. Cliquez sur Lancer l'aventure pour démarrer votre histoire. Le but de votre quête est de parcourir tous les lieux et d'arriver en un seul morceau au château. Vous devez absolument récupérer de quoi vous battre sur votre chemin pour affronter le roi du château. Bonne chance!"
 }
