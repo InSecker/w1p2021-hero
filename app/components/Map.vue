@@ -20,12 +20,14 @@
         @order="handleOrder"
         @description="handleDescription"
       ></InterestPoint>
+      <DarkMode></DarkMode>
     </div>
 
     <img 
     src="../assets/imgs/map.svg" 
     alt="Carte de jeu"
     class="map"/>
+
   </div>
 </template>
 
@@ -139,12 +141,15 @@ h1 {
 </style>
 
 <script>
+import DarkMode from './DarkMode'
 import InterestPoint  from './InterestPoint.vue';
 import chapterService from '../services/chapterService';
 import orderService from '../services/orderService';
 import json from '../data.json';
 
-var interestPoints = [
+var interestPoints = [];
+
+interestPoints = [
   {
     name: 'Spawn',
     order: 'Introduction'
@@ -178,7 +183,7 @@ export default {
     }
   },
   components: {
-    InterestPoint
+    InterestPoint, DarkMode
   },
   methods: {
     handleStart() {
@@ -197,6 +202,7 @@ export default {
             }
           });
         }
+        localStorage.chapters = JSON.stringify(chapterService.value());
         this.$router.push('/chapter/1');
       }
     },

@@ -1,48 +1,85 @@
 <template>
-  <div class="big-header">
-    <h1>{{ title }}</h1>
-    <br />
-    <article class="content">
-      <p
-        v-for="paragraphe in content"
-        :key="paragraphe"
-      >{{paragraphe}}</p>
-    </article>
-    <br>
-    <button @click="handleClick">Next</button>
+  <div>
+    <div class="description">
 
-    <div class="hud">
-      <section>
-        <ul class="inventory">
-          <h2>Inventaire</h2>
-          <Item
-          v-for="(item, index) in items"
-          :key="index"
-          :item="item"
-          ></Item>
-        </ul>
-      </section>
+      <article class="content">
+              <h1>{{ title }}</h1>
+      <br />
+        <p
+          v-for="paragraphe in content"
+          :key="paragraphe"
+        >{{paragraphe}}</p>
+      <br>
+      <button class="button_black" @click="handleClick">Suivant</button>
+      </article>
 
-      <section class="life">
-        <h2>Vie: {{ life }}</h2>
-      </section>
+
+      <div class="hud">
+        <section>
+          <ul class="inventory">
+            <h2>Inventaire</h2>
+            <Item
+            v-for="(item, index) in items"
+            :key="index"
+            :item="item"
+            ></Item>
+          </ul>
+        </section>
+
+        <section class="life">
+          <h2>Vie: {{ life }}</h2>
+        </section>
+      </div>
+      <DarkMode class="test"></DarkMode>
     </div>
 
+    <img class="chapterBackground" v-if="title === 'Lac de glace'" src="../assets/imgs/lacdeglace.svg"/>
+    <img class="chapterBackground" v-if="title === 'Village de marchands'" src="../assets/imgs/village-marchand_map.svg"/>
+    <img class="chapterBackground" v-if="title === 'Port'" src="../assets/imgs/lac.svg"/>
+    <img class="chapterBackground" v-if="title === 'Forêt Magique'" src="../assets/imgs/forêt.svg"/>
+    <img class="chapterBackground" v-if="title === 'Cascade'" src="../assets/imgs/cascade_map.svg"/>
+    <img class="chapterBackground" v-if="title === 'Grotte'" src="../assets/imgs/grotte.svg"/>
+    <img class="chapterBackground" v-if="title === 'Volcan'" src="../assets/imgs/volcan.svg"/>
+    <img class="chapterBackground" v-if="title === 'Labyrinthe'" src="../assets/imgs/labyrinthe.svg"/>
 
   </div>
 </template>
 
 <style lang="scss" scoped>
+.test {
+  z-index: 1;
+}
+
+
 .content {
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.9);
   color: rgb(21, 21, 21);
   padding: 20px;
-  font-size: 14px;
-  width: 50vw;
-  margin: 0 auto;
+  font-size: 18px;
+  width: 30%;
+  line-height: 1.5;
+  margin-top: 10px ;
+  margin-left: 65vw;
+  z-index: 1;
+  border: 7px solid black ;
+  border-radius: 10px;
+  h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .button_black {
+    width: 100%;
+    transition: all 0.5 ease;
+  }
+  .button_black:hover {
+    width: 100%;
+    color: black;
+    background: rgb(240,240,240);
+  }
 }
 
 .hud {
+  z-index: 1;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -63,6 +100,7 @@
 
 
 <script>
+import DarkMode from './DarkMode'
 import chapterService from '../services/chapterService';
 import inventoryService from '../services/inventoryService';
 import lifeService from '../services/lifeService';
@@ -72,8 +110,9 @@ import json from '../data.json';
 export default {
   data: function() {
     return {
-      title: chapterService.render(),
-      items: inventoryService.content(),
+      //title: chapterService.render(),
+      title: JSON.parse(localStorage.chapters)[(parseInt(this.$route.path.replace('/chapter/', ''))-1)],
+      items: null,
       content: '',
       nextView: null,
       life: lifeService.value(),
@@ -81,11 +120,12 @@ export default {
     }
   },
   props: ['chapters'],
-    components: {
-    Item
+  components: {
+    Item, DarkMode
   },
   methods: {
     handleClick() {
+      this.items = JSON.parse(localStorage.items)
       chapterService.nextChapter();
 
       // Load next chapter vue
@@ -218,26 +258,28 @@ export default {
         if (inventoryService.content().includes('Bâteau Volant')) {
           this.content.push(current.actions.flyingBoat);
           inventoryService.addItem(current.item);
-        } else if (lifeService.value >= 50) {
+        } else if (lifeService.value() === 100) {
           this.content.push(current.actions.default);
+          lifeService.loose();
+          this.life= lifeService.value()
           inventoryService.addItem(current.item);
         } else {
           this.content.push(current.actions.death);
+          lifeService.loose();
+          this.life= lifeService.value()
           this.nextView = '/die';
         }
       }
-
 
       // Win
       if (this.counter === 8 && this.nextView !== '/die') {
         this.nextView = '/win';
       }
 
-      console.log(this.counter)
+      this.items= JSON.parse(localStorage.items);
     }
   },
   beforeMount() {
-    //this.inventoryUpdate();
     this.actions();
   }
 };

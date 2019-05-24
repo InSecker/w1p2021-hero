@@ -1,12 +1,18 @@
 <template>
   <div class="big-header">
-    <h1>Path Picker</h1>
+    <h1 class="zoomText">Path Picker</h1>
     <br />
-    <router-link class="button" to="/map">Commencer l'aventure</router-link>
+    <router-link class="button_black" to="/map">Commencer l'aventure</router-link>
+    <DarkMode></DarkMode>
+  </div>
 </template>
 
 <script>
-export default {
+import DarkMode from './DarkMode'
 
+export default {
+  components: {
+    DarkMode,
+  }
 };
 </script>

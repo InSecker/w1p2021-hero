@@ -1,20 +1,35 @@
 <template>
-  <div>
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-    <button class='button_black' @click="handleClick"> Retourner à la map</button>
+  <div class="description">
+    
+    <article class="article">
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+      <button class='button_black' @click="handleClick"> Retourner à la map</button>
+      <DarkMode></DarkMode>
+      
+    </article>
+    <img class="chapterBackground" v-if="title === 'Lac de glace'" src="../assets/imgs/lacdeglace.svg"/>
+    <img class="chapterBackground" v-if="title === 'Village de marchands'" src="../assets/imgs/village-marchand_map.svg"/>
+    <img class="chapterBackground" v-if="title === 'Port'" src="../assets/imgs/lac.svg"/>
+    <img class="chapterBackground" v-if="title === 'Forêt Magique'" src="../assets/imgs/forêt.svg"/>
+    <img class="chapterBackground" v-if="title === 'Cascade'" src="../assets/imgs/cascade_map.svg"/>
+    <img class="chapterBackground" v-if="title === 'Grotte'" src="../assets/imgs/grotte.svg"/>
+    <img class="chapterBackground" v-if="title === 'Volcan'" src="../assets/imgs/volcan.svg"/>
+    <img class="chapterBackground" v-if="title === 'Labyrinthe'" src="../assets/imgs/labyrinthe.svg"/>
+
   </div>
 </template>
 
 <style lang="scss" scoped>
 
-div {
+article {
   display: block;
   text-align: center;
+  z-index: 1;
+  background: rgba(255,255,255,0.9);
   h1 {
     font-size: 30px;
     margin: 10px;
-    
   }
   p {
     font-size: 18px;
@@ -23,9 +38,9 @@ div {
     line-height: 1.5;
   }
   width: 40%;
-  margin: 20% auto;
-  border: 1px solid black ;
-  border-radius: 5px;
+  margin: 40px auto;
+  border: 7px solid black ;
+  border-radius: 10px;
   padding: 20px;
 }
 
@@ -34,9 +49,12 @@ div {
   background: white;
   
 }
+
+
 </style>
 
 <script>
+import DarkMode from './DarkMode'
 import json from '../data.json';
 
 
@@ -63,6 +81,9 @@ export default {
     handleClick() {
       this.$router.push('/map');
     }
+  },   
+  components: {
+    DarkMode,
   }
 }
 </script>

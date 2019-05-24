@@ -15,16 +15,16 @@ URL du site : https://hero-secher-vincelet.netlify.com/
 | Setup | Le site est en ligne, et l'URL est citée dans le README.md | ✓ |
 | Setup | Le site utilise VueJS | ✓ |
 | Setup | Cloner le repository et exécuter `npm install` puis `npm run dev` s'effectue sans encombre | ✓ |
-| Données | Un schéma numérique ou papier (scanné ou photographié) décrivant les différentes étapes et enchaînements possible. Affiché dans ce readme (si plusieurs images sont nécessaires, en afficher plusieurs, mais essayer d'être synthétique). | - |
+| Données | Un schéma numérique ou papier (scanné ou photographié) décrivant les différentes étapes et enchaînements possible. Affiché dans ce readme (si plusieurs images sont nécessaires, en afficher plusieurs, mais essayer d'être synthétique). | ✓ |
 | Données | Un fichier `data.json` est utilisé pour stocker la structure du jeu | ✓ |
-| Données | Le fichier `data.json` décrit 30 phases de jeu ou plus. Indiquez *En partie* s'il en décrit plus de 15. | - |
+| Données | Le fichier `data.json` décrit 30 phases de jeu ou plus. Indiquez *En partie* s'il en décrit plus de 15. **Notre structure de jeu est différente** | ~ |
 | Pages | Une page d'accueil est présente | ✓ |
 | Pages | Une page de choix du personnage est présente | - |
 | Pages | Une page de victoire est présente | ✓ |
 | Pages | Une page d'échec est présente | ✓ |
 | Routing | Une route dont l'`id` varie permet d'afficher les différentes étapes du jeu | ✓ |
 | Routing | Lorsqu'on recharge la page (`Ctrl + R`), on se trouve toujours à la même étape | - |
-| Transitions | Chaque page apparaît grâce à une transition fluide (la complexité de la transition n'est pas prise en compte ici) | - |
+| Transitions | Chaque page apparaît grâce à une transition fluide (la complexité de la transition n'est pas prise en compte ici) | ✓ |
 | Transitions | Les transitions internes au jeu (d'une étape à une autre) et externes (intro, fin...) sont différentes | - |
 | État | Le choix du personnage et/ou de ses caractéristiques impacte l'aventure au moins une fois. **Indiquez ici comment succintement.** | - |
 | État | Une décision ou un événement aléatoire survenu pendant l'aventure a un impact sur la suite, au moins une fois. **Toute notre aventure dépend des choix précédents** | ✓ |

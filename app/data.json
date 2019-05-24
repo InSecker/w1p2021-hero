@@ -54,7 +54,7 @@
     "Grotte": {
       "id" : 6,
       "title": "Grotte",
-      "detail": "Une grotte sombre et mystérieuse. Très peu d'aventuriers s'y risquent, ceux qui en resorte vivant sont encore plus rare. ",
+      "detail": "Une grotte sombre et mystérieuse. Très peu d'aventuriers s'y risquent, ceux qui en ressortent vivant sont encore plus rare.",
       "intro": "Votre chemin vous mène maintenant votre la grotte. Plus vous vous en approchez plus vous semblez aspiré par l'obscurité. Vous êtes dans le noir complet et une étrange sensation de fatigue vous emporte. Vous vous réveillez à l'entrée de la grotte en saignant.",
       "actions": {
         "death": "Vous n'avez plus de vie, vous mourrez",

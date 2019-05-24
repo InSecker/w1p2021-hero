@@ -18,6 +18,9 @@ class ChapterService {
   length() {
     return this.chapter.length;
   }
+  value() {
+    return this.chapter;
+  }
 }
 
 module.exports = new ChapterService();
