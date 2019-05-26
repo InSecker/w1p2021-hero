@@ -6,27 +6,27 @@
       "detail": "Ce lac dispose d'un trésor en ce milieu. Rare sont ceux qui osent s'aventurer sur cette mince couche de glace!",
       "intro": "Vous arrivez sur le bord du Lac de Glace. On distingue très clairement le fond du lac à travers la glace.",
       "actions": {
-        "emptyInventory": "Doucement, un pas après l'autre, vous commencez à marcher sur cette fine couche de glace qui craque sous vos pieds. Vous gardez courage! Vous appercevez déjà le coffre au milieu du lac! Hop hop hop vous vous faufilez telle la brise sur la glace. Enfin vous récuperez la carte du labyrinthe. Vous rejoignez la rive du lac, contemplez une dernière fois ce lieu figé, puis vous remettez en route pour votre quête!",
-        "notEmptyInventory": "Très incertain, vous commencez à déambuler sur cette fine couche de glace. Vous n'avez fait qu'une dizaine de mètres mais déjà des fissures se dessinent sous vos pas... Le coffre n'est plus très loin mais la glace s'amincie de plus en plus. Malgrè vos efforts pour rester le plus légé possible sur cette glace, vous tombez dans l'eau glaciale. Votre lourd équipement vous fait sombrer dans les abymes du Lac de Glace."
+        "emptyInventory": "Doucement, un pas après l'autre, vous commencez à marcher sur cette fine couche de glace qui craque sous vos pieds. Vous gardez courage! Vous appercevez déjà le coffre au milieu du lac! Hop hop hop vous vous faufilez telle la brise sur la glace. Enfin vous récuperez la carte du labyrinthe. Vous regagnez la rive du lac, contemplez une dernière fois ce lieu figé, puis vous remettez en route pour votre quête!",
+        "notEmptyInventory": "Très incertain, vous commencez à déambuler sur cette fine couche de glace. Vous n'avez fait qu'une dizaine de mètres mais déjà des fissures se dessinent sous vos pas... Le coffre n'est plus très loin mais la glace s'amincie de plus en plus. Malgrè vos efforts pour rester le plus légé possible, vous tombez dans l'eau glaciale. Votre lourd équipement vous fait sombrer dans les abysses du lac."
       },
       "item": "Carte du Labyrinthe B"
     },
     "Village de marchands": {
       "id" : 2,
       "title": "Village de marchands",
-      "detail": "Ce petit village possède une concentration extordinaire de camelot en tout genre. C'est l'endroit parfait pour troquer et vendre vos objets.",
+      "detail": "Ce petit village possède une concentration extraordinaire de camelot en tout genre. C'est l'endroit parfait pour troquer et vendre vos objets.",
       "intro": "Vous arrivez au village de marchands.",
       "actions": {
-        "swapArmor": "Vous échanger votre armure contre la Carte du Labyrinthe A.",
+        "swapArmor": "Vous échangez votre armure contre la Carte du Labyrinthe A.",
         "swapPlant": "Vous échangez votre Pissenlit Magique contre de l'or.",
-        "swapTreasure": "Vous échanger votre Trésor contre de l'or.",
+        "swapTreasure": "Vous échangez votre Trésor contre de l'or.",
         "default": "Vous n'avez rien à troquer."
       }
     },
     "Port": {
       "id" : 3,
       "title": "Port",
-      "detail": "Le port est l'endroit le plus mal famé du royaume. Il y reste néanmoins quelques marchands plus ou moins honnête. Restez prudent!",
+      "detail": "Le port est l'endroit le plus mal famé du royaume. Il y reste néanmoins quelques marchands plus ou moins honnêtes. Restez prudent!",
       "intro": "Vous arrivez au Port.",
       "actions": {
         "gotGold": "Vous achetez un Bâteau avec votre or!",
@@ -46,8 +46,8 @@
       "detail": "C'est la source d'eau du royaume tout entier. Retenue par une immense chaîne, cette île flottante est le point le plus haut du royaume.",
       "intro": "Vous arrivez au pied de cette cascade. La grande chaine qui retiens la source flottante vous permet de monter jusqu'en haut. Vous y découvrez une armure magique!",
       "actions": {
-        "default": "Rien de plus à faire ici. Du haut de cette cascade vous contempler toute la région. Vous êtes sur le point le plus haut du royaume.",
-        "boatAndPlant": "Vous embarquez sur votre bâteau. La magie des pissenlits vous permet de vous envolez!"
+        "default": "Rien de plus à faire ici. Du haut de cette cascade vous contemplez toute la région. Vous êtes sur le point le plus haut du royaume.",
+        "boatAndPlant": "Vous embarquez sur votre bâteau. La magie des pissenlits vous permet de vous envoler!"
       },
       "item": "Armure"
     },
@@ -64,24 +64,24 @@
     "Volcan": {
       "id" : 7,
       "title": "Volcan",
-      "detail": "Sans doûte l'endroit le plus dangereux du royaume! C'est ici que fût forger l'Épée des flammes il y a très longtemps. Une histoire raconte que la lame est toujours là, elle attendrait son prochain propriètaire.",
+      "detail": "Sans doûte l'endroit le plus dangereux du royaume! C'est ici que fût forgée l'Épée des flammes il y a très longtemps. Une histoire raconte que la lame est toujours là, elle attendrait son prochain propriètaire.",
       "item": "Épée des flammes",
       "actions": {
         "flyingBoat" : "Vous arrivez aux abords du Volcan sur votre bâteau volant. Vous avez une altitude bien supérieure à celle du sommet du volcan. Vous arrivez sans peine à vous approchez du cratère. Vous récupérez l'Épée des flammes!",
-        "default": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'assencion. Les pentes éscarpées vous font tribucher sur la roche burlante! Vous perdez de la vie. Vous arrivez néanmoins jusqu'au cratère. Vous récupérez l'Épée des flammes!",
-        "death": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'assencion. Les pentes éscarpées vous font tribucher sur la roche burlante! Vous mourrez."
+        "default": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'ascencion. Les pentes éscarpées vous font tribucher sur la roche brulante! Vous perdez de la vie. Vous arrivez néanmoins jusqu'au cratère. Vous récupérez l'Épée des flammes!",
+        "death": "Vous arrivez au pied de ce gigantesque volcan. Vous commencez l'assencion. Les pentes éscarpées vous font tribucher sur la roche brûlante! Vous mourrez."
       }
     },
     "Labyrinthe":  {
       "id" : 8,
       "title": "Labyrinthe",
-      "detail": "Il est si facile de se perdre dans ce labyrinthe que certains s'amusent à cacher des trésors dans ses dédales de couloirs. Les pilleurs n'ont plus qu'à recupérer l'équipement des aventuriers qui meurent de faim.",
+      "detail": "Il est si facile de se perdre dans ce labyrinthe que certains s'amusent à cacher de faux trésors dans ses dédales de couloirs. Les pilleurs n'ont plus qu'à recupérer l'équipement des aventuriers qui meurent de faim.",
       "intro": "Vous arrivez au labyrinthe.",
       "actions": {
         "gotGoodMap": "Avec votre carte vous parvenez à vous diriger sans encombre dans ses dédales. À gauche, deux fois à droite, tout droit... Oh un coffre! Magnifique! Vous trouvez le trésor.",
         "gotFalseMap": "Avec votre carte vous parvenez à vous dirigier sans encombre dans ses dédales. À gauche, tout droit, à droite... Oops. Pas de chance vous tombez dans un piège.",
         "gotPlant": "Avec votre pissenlit magique vous parvenez à vous envoler et repérer directement le coffre. Magifique! Vous trouvez le trésor. Hop vous vous envolez à nouveau et regagnez la sortie.",
-        "default": "Vous vous sentez confiant. Un labyrinthe ce n'est pas sorcier il suffit de toujours tourner dans la même direction pour se repèrer... Vous êtes perdu. Vous tentez pendant des jours de retrouvez la sortie... Sans succès."
+        "default": "Vous vous sentez confiant. Un labyrinthe ce n'est pas sorcier il suffit de toujours tourner dans la même direction pour se repèrer... Vous êtes perdu. Vous tentez pendant des jours de retrouver la sortie... Sans succès."
       }
     }
   },
